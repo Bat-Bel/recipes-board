@@ -1,0 +1,19 @@
+body {
+  /* padding: 50px; */
+  font: 14px sans-serif;
+  /* background-color: #bb7fd4 !important; */
+}
+
+.myAlert {
+  position: absolute !important;
+  top: 0px;
+  width: 100%;
+}
+
+.myContainer{
+  margin-top: 50px;
+}
+
+a {
+  color: #00B7FF;
+}
