@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { pool } from './app';
 
 const routes = Router();
 
@@ -8,6 +9,22 @@ const routes = Router();
 routes.get('/', (req, res) => {
   res.render('index', { title: 'Express Babel' });
 });
+
+routes.get('/users', (req, res) => {
+  const q = { text: 'SELECT * FROM t_user' };
+  pool.connect((err, client, release) => {
+    if (err) {
+      return console.error('Error acquiring client', err.stack)
+    }
+    client.query(q.text, (err, result) => {
+      release()
+      if (err) {
+        return console.error('Error executing query', err.stack)
+      }
+      res.render('users', { users: result.rows });
+    });
+  })
+})
 
 /**
  * GET /list
