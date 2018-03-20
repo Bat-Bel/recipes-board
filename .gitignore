@@ -4,6 +4,7 @@
 # my ignores
 READ-ME.emede
 DEPLOY-MENT.emede
+recipes-boardDB.sql
 
 # Logs
 logs

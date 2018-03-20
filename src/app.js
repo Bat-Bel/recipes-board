@@ -4,6 +4,16 @@ import logger from 'morgan';
 import bodyParser from 'body-parser';
 import routes from './routes';
 
+const pg = require('pg');
+
+export const pool = new pg.Pool({
+  host: 'localhost',
+  port: 5432,
+  user: 'Yasser',
+  password: '',
+  database: 'recipes_board_db'
+});
+
 const app = express();
 app.disable('x-powered-by');
 
