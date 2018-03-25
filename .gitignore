@@ -6,6 +6,7 @@ READ-ME.emede
 DEPLOY-MENT.emede
 recipes-boardDB.sql
 my-READ-ME.md
+.DS_Store
 
 # Logs
 logs
