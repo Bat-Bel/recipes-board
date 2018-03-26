@@ -9,8 +9,8 @@ const pg = require('pg');
 export const pool = new pg.Pool({
   host: 'localhost',
   port: 5432,
-  user: 'Yasser',
-  password: '',
+  user: 'recipes_user',
+  password: '#recipesdb@',
   database: 'recipes_board_db'
 });
 

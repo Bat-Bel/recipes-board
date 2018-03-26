@@ -11,6 +11,7 @@ routes.get('/', (req, res) => {
 });
 
 routes.get('/users', (req, res) => {
+
   const q = { text: 'SELECT * FROM t_user' };
   pool.connect((err, client, release) => {
     if (err) {
@@ -23,8 +24,8 @@ routes.get('/users', (req, res) => {
       }
       res.render('users', { users: result.rows });
     });
-  })
-})
+  });
+});
 
 /**
  * GET /list
